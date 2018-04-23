@@ -27,10 +27,10 @@ FIELD_HEIGHT = -1
 SLIDER_SIZE = 300
 
 
-class MyApp(App):
+class TurbotDynRec(App):
 
     def __init__(self, *args):
-        super(MyApp, self).__init__(*args)
+        super(TurbotDynRec, self).__init__(*args)
         # rospy.spin()
 
     def main(self, name='world'):
@@ -442,7 +442,7 @@ if __name__ == "__main__":
         [(s.connect(('8.8.8.8', 53)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1]]) if l][0][0]
     rospy.loginfo(
         "Web dynamic reconfigure initalizing on port 8090 and ips: " + str(ips_list))
-    start(MyApp,
+    start(TurbotDynRec,
           # address="192.168.200.132",
           address="0.0.0.0",
           port=8090,
